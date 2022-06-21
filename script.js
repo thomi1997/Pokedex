@@ -1,25 +1,17 @@
-async function getSynonyms() {
-    let query = document.getElementById('searchquery').value;
-    let url = `https://www.openthesaurus.de/synonyme/search?q=${query}&format=application/json`;
+let currentPokemon;
+
+
+async function loadPokemon() {
+    let url = 'https://pokeapi.co/api/v2/pokemon/ditto'
     let response = await fetch(url);
-    let responseAsJson = await response.json();
-    let synsets = responseAsJson['synsets'];
-    renderSynsets(synsets);
+    currentPokemon = await response.json();
+    console.log('Loaded pokemon', currentPokemon);
+
+    renderPokemonInfo();
 }
 
 
-function renderSynsets(synsets) {
-    let container = document.getElementById('container');
-    container.innerHTML = `<div>Es wurden <b>${synsets.length}</b> Synonym-Sets geladen<div>`;
-
-    for (let i = 0; i < synsets.length; i++) {
-        const synset = synsets[i];
-        let terms = synset['terms']; // ist ein array !!
-        container.innerHTML += `<h2>Synonym-Set mit ID ${synset['id']}</h2>`;
-
-        for (let j = 0; j < terms.length; j++) {
-            const term = terms[j];
-            container.innerHTML += `<div>${term['term']}</div>`;
-        }
-    }
+function renderPokemonInfo() {
+    let container = document.getElementById('pokedex').innerHTML = currentPokemon['name'];
+    console.log('loaded', currentPokemon['weight']);
 }
