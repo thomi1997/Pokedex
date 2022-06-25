@@ -6,4 +6,20 @@ body {
     min-height: 50vh;
     background-color: rgb(189, 47, 47);
     color: white;
+    display: flex;
+    padding: 24px;
+}
+
+.infor-container {
+    background-color: white;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    min-height: 100px;
+    margin-top: -40px;
+}
+
+.pokemon-img {
+    width: 200px;
+    object-fit: contain;
+    margin-top: -140px;
 }

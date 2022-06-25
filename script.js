@@ -1,17 +1,18 @@
-let currentPokemon;
+let currentPokemons;
 
 
 async function loadPokemon() {
     let url = 'https://pokeapi.co/api/v2/pokemon/ditto'
     let response = await fetch(url);
-    currentPokemon = await response.json();
-    console.log('Loaded pokemon', currentPokemon);
+    currentPokemons = await response.json();
+    console.log('Loaded pokemon', currentPokemons);
 
     renderPokemonInfo();
 }
 
 
 function renderPokemonInfo() {
-    let container = document.getElementById('pokedex').innerHTML = currentPokemon['name'];
-    console.log('loaded', currentPokemon['weight']);
+    document.getElementById('pokedex-name').innerHTML = currentPokemons['name'];
+    document.getElementById('pokemon-img').src = currentPokemons['sprites']['front_default'];
+    document.getElementById('about-pokemon').innerHTML += currentPokemons['stats'][0]['base_stat'];
 }
