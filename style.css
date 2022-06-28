@@ -2,15 +2,18 @@ body {
     margin: 0;
 }
 
-#pokedex {
-    min-height: 50vh;
+.pokedex {
+    min-height: 200px;
     background-color: rgb(189, 47, 47);
     color: white;
     display: flex;
     padding: 24px;
 }
 
-.infor-container {
+.info-container {
+    display: none;
+    height: 50vh;
+    width: 50vw;
     background-color: white;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
@@ -22,4 +25,8 @@ body {
     width: 200px;
     object-fit: contain;
     margin-top: -140px;
+}
+
+.pokemon-typen {
+    
 }
