@@ -1,43 +1,61 @@
 let currentPokemons;
+let allPokemons = [];
 let pokemonsNames = [];
-let numberPokemons = 151;
+let numberPokemons = 8;
 
 
 async function loadPokemon() {
-    let url = `https://pokeapi.co/api/v2/pokemon/ditto`;
+    for (let i = 1; i < numberPokemons; i++) {
+    let url = `https://pokeapi.co/api/v2/pokemon/${i}`;
     let response = await fetch(url);
     currentPokemons = await response.json();
+    allPokemons.push(currentPokemons);
     console.log('Loaded pokemon', currentPokemons);
-
+    }
     renderPokemonInfo();
     loadPokemonName();
 }
 
 
 async function loadPokemonName() {
-    let url = `https://pokeapi.co/api/v2/pokemon?limit=3&offset=0`;
+    for (let i = 1; i < numberPokemons; i++) {
+    let url = `https://pokeapi.co/api/v2/pokemon-species/${i}`;
     let response = await fetch(url);
     let AllPokemonsNames = await response.json();
     pokemonsNames.push(AllPokemonsNames);
+    console.log('Ist gleich', pokemonsNames);
+    }
     RenderPokemonsNames();
-    console.log(PokemonsNames);
+    RenderPokemonsImg();
 }
 
 
 function RenderPokemonsNames() {
-    let names = pokemonsNames;
-    let container = document.getElementById('pokedex');
-    for (let i = 0; i < names.length; i++) {
-        const name = names[i];
-        container.innerHTML += /*html*/`<div>Pokemon ${name}<div>`;
+    document.getElementById('pokedex').innerHTML = '';
+    for (let i = 0; i < allPokemons.length; i++) {
+        const id = allPokemons[i]['name'];
+        document.getElementById('pokedex').innerHTML += /*html*/`
+        <div>
+            ${i, id}
+        <div>
+        <div>
+            <img src="" id="pokedex-img${i}" width="107" height="98">
+        </div>
+        `;
     }
+}
+
+
+function RenderPokemonsImg() {
+    let src = allPokemons['sprites']['other']['home']['front_shiny'];
+    document.getElementById(`pokedex-img${i}`).src =allPokemons[src];
 }
 
 
 function renderPokemonInfo() {
     document.getElementById('pokedex-name').innerHTML = /*html*/`
         <div>
-            <p>${currentPokemons['name']}</p>
+            <p>${allPokemons[0]['name']}</p>
             <p># 1</p>
         </div>
         `;
