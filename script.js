@@ -1,7 +1,7 @@
 let currentPokemons;
+let AllPokemonsNames;
 let allPokemons = [];
-let pokemonsNames = [];
-let numberPokemons = 8;
+let numberPokemons = 30;
 
 
 async function loadPokemon() {
@@ -12,43 +12,31 @@ async function loadPokemon() {
     allPokemons.push(currentPokemons);
     console.log('Loaded pokemon', currentPokemons);
     }
+    renderPokemonProfil();
     renderPokemonInfo();
-    loadPokemonName();
 }
 
 
-async function loadPokemonName() {
-    for (let i = 1; i < numberPokemons; i++) {
-    let url = `https://pokeapi.co/api/v2/pokemon-species/${i}`;
-    let response = await fetch(url);
-    let AllPokemonsNames = await response.json();
-    pokemonsNames.push(AllPokemonsNames);
-    console.log('Ist gleich', pokemonsNames);
-    }
-    RenderPokemonsNames();
-    RenderPokemonsImg();
-}
-
-
-function RenderPokemonsNames() {
+function renderPokemonProfil() {
     document.getElementById('pokedex').innerHTML = '';
     for (let i = 0; i < allPokemons.length; i++) {
         const id = allPokemons[i]['name'];
         document.getElementById('pokedex').innerHTML += /*html*/`
-        <div>
-            ${i, id}
-        <div>
-        <div>
-            <img src="" id="pokedex-img${i}" width="107" height="98">
+        <div class="pokedex-div">
+            <div class="pokedex-name-type">
+                <h2>
+                    ${i, id}
+                </h2>
+                <h3>
+                    duhjvghdv
+                </h3>
+            </div>
+            <div id="pokedex-img-div">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/${i+1}.png" class="pokemon-img" id="pokedex-img">
+            </div>
         </div>
         `;
     }
-}
-
-
-function RenderPokemonsImg() {
-    let src = allPokemons['sprites']['other']['home']['front_shiny'];
-    document.getElementById(`pokedex-img${i}`).src =allPokemons[src];
 }
 
 

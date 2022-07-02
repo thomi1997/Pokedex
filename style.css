@@ -2,7 +2,41 @@ body {
     margin: 0;
 }
 
+h2 {
+    font-size: 30px;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
 .pokedex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pokedex-div {
+    min-width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aquamarine;
+    border-radius: 40px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.pokedex-name-type {
+    padding-left: 40px;
+}
+
+.pokemon-img {
+    height: 200px;
+    width: 200px;
+}
+
+.pokedex-info {
     min-height: 200px;
     background-color: rgb(189, 47, 47);
     color: white;
@@ -21,7 +55,7 @@ body {
     margin-top: -40px;
 }
 
-.pokemon-img {
+.pokemon-img-info {
     width: 200px;
     object-fit: contain;
     margin-top: -140px;
