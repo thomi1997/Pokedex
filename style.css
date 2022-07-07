@@ -14,6 +14,7 @@ h2 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    cursor: pointer;
 }
 
 .pokedex-div {
@@ -48,26 +49,70 @@ h2 {
     width: 200px;
 }
 
+.pokedex-info-div {
+    display: flex;
+    align-items: center;
+}
+
 .pokedex-info {
-    min-height: 200px;
+    min-height: 300px;
+    min-width: 500px;
     background-color: rgb(189, 47, 47);
     color: white;
     display: flex;
     padding: 24px;
-}
-
-.info-container {
-    height: 50vh;
-    width: 50vw;
-    background-color: white;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    min-height: 100px;
+}
+
+.info-container-head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.close-arrow {
+    height: 50px;
+    cursor: pointer;
+}
+
+.arrow-right {
+    height: 50px;
+    cursor: pointer;
+}
+
+.arrow-left {
+    height: 50px;
+    cursor: pointer;
+}
+
+.info-container-detail {
+    background-color: white;
+    border-radius: 40px;
     margin-top: -40px;
 }
 
+.info-container {
+    min-width: 500px;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.info-container.is-visible {
+    display: flex;
+    flex-direction: column;
+    background-color: #484848bf;
+}
+
 .pokemon-img-info {
-    width: 200px;
+    width: 400px;
     object-fit: contain;
-    margin-top: -140px;
+    margin-bottom: -60px;
 }
