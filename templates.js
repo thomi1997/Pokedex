@@ -29,19 +29,20 @@ function htmlRenderPokemonHeadProfil(name, i) {
         </div>
         <div>
             <div class="pokedex-info">
-                <div class="info-container-head">
+                <div class="info-container-head" id="type-color${i}">
                 <svg onclick="closePokemonDetail()" class="close-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                     <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                     <path 
                         d="M447.1 256C447.1 273.7 433.7 288 416 288H109.3l105.4 105.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L109.3 224H416C433.7 224 447.1 238.3 447.1 256z"/>
                 </svg>
                     <h1>${name}</h1>
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/${i + 1}.png" class="pokemon-img-info" id="pokemon-img">
                 </div>
-                <div id="pokemon-typ">
-                </div>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/${i + 1}.png" class="pokemon-img-info" id="pokemon-img">
             </div>
-            <div class="info-container-detail" id="stat${i}">
+            <div class="info-container-detail" id="stat">
+                <div class="types-info" id="pokemon-typ">
+                    Typen
+                </div>
             </div>
         </div>
         <div>
@@ -58,21 +59,22 @@ function htmlRenderPokemonHeadProfil(name, i) {
 
 function htmlRenderPokemonDetailProfil(statName, baseStat) {
     return  /*html*/`
-            <div class="">
-                <table>
-                    <tr>
-                        <td>
-                            <p id="stat-name">
-                                ${statName}
-                            </p>
-                        </td>
-                        <td>
-                            <p id="about-pokemon-HP-1">
-                                ${baseStat}
-                            </p>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            `;
+    <div class="pokemon-detail-profil">
+        <p>
+            ${statName}
+        </p>
+        <div class="progress-bar" style="height:24px;width:${baseStat}%">
+            ${baseStat}
+        </div>
+    </div>
+    `;
+}
+
+
+function htmlRenderPokemontypes(type, j) {
+    return /*html*/`
+    <span class="pokedex-types text-align-center">
+        ${j, type}
+    </span>
+    `;
 }

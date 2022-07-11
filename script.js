@@ -1,6 +1,6 @@
 let allPokemons = [];
 let allpokedexColor = [];
-let numberPokemons = 5;
+let numberPokemons = 11;
 
 
 async function loadPokemon() {
@@ -37,11 +37,7 @@ function renderPokemonProfil() {
 
         for (let j = 0; j < types.length; j++) {
             let type = types[j]['type']['name'];
-            document.getElementById(`pokedex-types${i}`).innerHTML += /*html*/`
-            <span class="pokedex-types text-align-center">
-                ${j, type}
-            </span>
-            `;
+            document.getElementById(`pokedex-types${i}`).innerHTML += htmlRenderPokemontypes(type, j);
         }
     }
 }
@@ -50,13 +46,49 @@ function renderPokemonProfil() {
 function renderPokemonDetailProfil(i) {
     let stats = allPokemons[i]['stats'];
     let name = allPokemons[i]['name'];
+    let types = allPokemons[i]['types'];
     document.getElementById('pokemon-stats').innerHTML += htmlRenderPokemonHeadProfil(name, i);
-    for (let j = 0; j < 6; j++) {
+
+    let height = allPokemons[i]['height'];
+    let weight = allPokemons[i]['weight'];
+    document.getElementById('stat').innerHTML += /*html*/`
+    <div class="height-and-weight">
+        <div>
+            <p>
+                Height
+            </p> 
+            <p>
+                ${height}
+            </p>
+        </div>            
+        <div>
+            <p>
+                Weight
+            </p> 
+            <p>
+                ${weight}
+            </p>
+        </div>
+    </div>
+    `;
+
+    for (let j = 0; j < stats.length; j++) {
         let statName = stats[j]['stat']['name'];
         let baseStat = stats[j]['base_stat'];
-        let infoContainer = document.getElementById(`stat${i}`)
-        infoContainer.innerHTML += htmlRenderPokemonDetailProfil(statName, baseStat);
+        document.getElementById('stat').innerHTML += htmlRenderPokemonDetailProfil(statName, baseStat, height, weight);
     }
+
+    for (let k = 0; k < types.length; k++) {
+        let type = types[k]['type']['name'];
+        document.getElementById('pokemon-typ').innerHTML += /*html*/`
+        <div>
+            <p>
+                ${type}
+            </p>
+        </div>
+        `;
+    }
+    showPokemonDetail();
 }
 
 
@@ -84,8 +116,8 @@ function moveRight(i) {
 
 function colorPushPokedex() {
     for (let i = 0; i < allpokedexColor.length; i++) {
-        const color = allpokedexColor[i]['color'];
-        document.getElementById(`type-color${i}`).style.backgroundColor += `${color['name']}`;
+        const color = allpokedexColor[i]['color']['name'];
+        document.getElementById(`type-color${i}`).style.backgroundColor += `${color}`;
     }
 }
 
@@ -95,5 +127,6 @@ function showPokemonDetail() {
 }
 
 function closePokemonDetail() {
+    document.getElementById('pokemon-stats').innerHTML = '';
     document.getElementById('pokemon-stats').classList.remove('is-visible');
 }
