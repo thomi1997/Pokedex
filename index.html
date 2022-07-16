@@ -12,12 +12,22 @@
 </head>
 
 <body onload="loadPokemon()">
-    <div class="container-scroll">
+    <div class="headline">
+        <div>
+            <img class="headline-img" src="./img/pokeball.png">
+        </div>
+        <input class="search-pokemon-input" id="search-pokemon" placeholder="Suche Pokemon" onkeyup="namesFilter()">
+        <div>
+            <a href="xxx">
+                Impressum
+            </a>
+        </div>
+    </div>
+    <div class="pokedex-background">
         <div class="pokedex" id="pokedex">
         </div>
     </div>
     <div class="info-container" id="pokemon-stats">
     </div>
 </body>
-
 </html>
