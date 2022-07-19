@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
@@ -16,15 +17,48 @@ h1 {
     padding-right: 25px;
 }
 
+.impressum-headline {
+    height: 150px;
+    background-color: hsl(0deg 0% 0% / 87%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 25px;
+}
+
+.link-impressum {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.link-impressum:hover {
+    text-decoration: underline;
+    color: rgb(180, 180, 180);
+}
+
+.impressum-return-home {
+    width: 100px;
+}
+
+.impressum-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 input:focus-visible {
     outline: none;
 }
 
 
 .search-pokemon-input {
-    height: 30px;
+    height: 50px;
     width: 300px;
     border: none;
+    border-radius: 10px;
+    font-size: 20px;
 }
 
 .headline-img {

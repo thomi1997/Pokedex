@@ -121,13 +121,8 @@ function closePokemonDetail() {
 
 function namesFilter() { /*search gibt das wieder was ich ins inputfeld eingebe!!*/
     let search = document.getElementById('search-pokemon').value;
-    search = search.toLowerCase();
+    search = search.toLowerCase();//konvertieren in kleine buchstaben!
     document.getElementById('pokedex').innerHTML = '';
-    pokemonNameDetail(search);
-}
-
-
-function pokemonNameDetail(search) {
     for (let i = 0; i < allPokemons.length; i++) {
         let name = allPokemons[i].name;
         let Name = name.charAt(0).toUpperCase() + name.slice(1);
@@ -148,5 +143,6 @@ function pushTheCorrectPokemon(Name, i, search, Type, j) {
         document.getElementById(`pokedex-types${i}`).innerHTML += htmlRenderPokemontypes(Type, j);
         color = allpokedexColor[i]['color']['name'];
         document.getElementById(`type-color${i}`).style.backgroundColor += `${color}`;
+        console.log('pokemon', Name, Type);
     }
 }
