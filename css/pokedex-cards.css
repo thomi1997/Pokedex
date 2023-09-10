@@ -1,0 +1,129 @@
+.pokedex {
+    background: rgb(255, 255, 255);
+    background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 1) 10%, rgba(255, 252, 0, 1) 50%, rgba(255, 255, 255, 1) 90%);
+    background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 1) 10%, rgba(255, 252, 0, 1) 50%, rgba(255, 255, 255, 1) 90%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 10%, rgba(255, 252, 0, 1) 50%, rgba(255, 255, 255, 1) 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff", GradientType=1);
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 132px;
+}
+
+.pokedex-search {
+    background: rgb(255, 255, 255);
+    background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 1) 10%, rgba(255, 252, 0, 1) 50%, rgba(255, 255, 255, 1) 90%);
+    background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 1) 10%, rgba(255, 252, 0, 1) 50%, rgba(255, 255, 255, 1) 90%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 10%, rgba(255, 252, 0, 1) 50%, rgba(255, 255, 255, 1) 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff", GradientType=1);
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 132px;
+}
+
+.pokedex-div {
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+    cursor: pointer;
+    transition: transform 300ms ease-in-out;
+}
+
+.pokedex-div:hover {
+    transform: scale(1.05);
+}
+
+.head-img-name-box {
+    position: relative;
+    bottom: 8%;
+    text-align: center;
+    border-radius: 46px;
+}
+
+.pokemon-logo-svg {
+    height: 250px;
+    width: 100%;
+    border-radius: 12px;
+    background: rgb(180, 58, 89);
+    background: -moz-linear-gradient(90deg, rgba(180, 58, 89, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 124, 69, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(180, 58, 89, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 124, 69, 1) 100%);
+    background: linear-gradient(90deg, rgba(180, 58, 89, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 124, 69, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b43a59", endColorstr="#fc7c45", GradientType=1);
+}
+
+.pikachu-img {
+    height: 80px;
+    position: absolute;
+    filter: invert(1);
+}
+
+.pokeball-origin {
+    height: 100px;
+    position: absolute;
+    bottom: 42%;
+    left: 4%;
+    filter: invert(1);
+}
+
+.pokedex-name-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number-pokemon {
+    font-family: 'Pokemon-Hollow';
+    font-size: 2rem;
+    font-weight: 800;
+    color: rgb(103, 100, 100);
+    margin-right: 12px;
+}
+
+.pokedex-types-div {
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokedex-types {
+    background-color: #615b5b8a;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-family: 'Baloo';
+    color: rgb(255, 255, 255);
+}
+
+.pokemon-img {
+    height: 232px;
+    width: auto;
+    object-fit: contain;
+}
+
+@media (max-width:1024px) {
+    .pokedex {
+        justify-content: center;
+    }
+}
+
+@media (max-width:400px) {
+    .pokedex {
+        padding-top: 162px;
+    }
+
+    .pokedex-div {
+        width: 100%;
+    }
+
+    .pokemon-img {
+        width: 100%;
+    }
+}

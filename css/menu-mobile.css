@@ -1,0 +1,78 @@
+.menu-mobile {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    background: rgb(255, 4, 4);
+    background: -moz-linear-gradient(17deg, rgba(255, 4, 4, 1) 13%, rgba(236, 230, 217, 1) 51%, rgba(237, 168, 77, 1) 71%);
+    background: -webkit-linear-gradient(17deg, rgba(255, 4, 4, 1) 13%, rgba(236, 230, 217, 1) 51%, rgba(237, 168, 77, 1) 71%);
+    background: linear-gradient(17deg, rgba(255, 4, 4, 1) 13%, rgba(236, 230, 217, 1) 51%, rgba(237, 168, 77, 1) 71%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff0404", endColorstr="#eda84d", GradientType=1);
+    z-index: 999;
+}
+
+.open-menu {
+    animation: openMobileMenu 800ms reverse ease-in-out;
+}
+
+@keyframes openMobileMenu {
+    0% {
+        right: 0%;
+    }
+
+    100% {
+        right: 100%;
+    }
+}
+
+.close-menu {
+    animation: closeMobileMenu 800ms forwards ease-in-out;
+}
+
+@keyframes closeMobileMenu {
+    0% {
+        right: 0%;
+    }
+
+    100% {
+        right: 100%;
+    }
+}
+
+.align-objects-mobile {
+    min-height: 34%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headline-img-mobile {
+    height: 154px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.change-number-div-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.link-impressum-div-mobile {
+    width: 50%;
+    text-align: center;
+}
+
+.menu-mobile-arrow-back-svg {
+    height: 50px;
+    fill: rgb(195, 0, 0);
+    position: absolute;
+    right: 11%;
+    top: 1%;
+    cursor: pointer;
+}
+
+.menu-mobile-arrow-back-svg:hover {
+    filter: brightness(2);
+}

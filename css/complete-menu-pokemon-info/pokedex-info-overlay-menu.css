@@ -1,0 +1,66 @@
+.pokedex-info-menu {
+    height: 39.2%;
+    display: flex;
+    flex-direction: column;
+    background: rgb(34, 116, 195);
+    border-radius: 40px;
+    margin-top: -40px;
+}
+
+.info-menu-div {
+    width: 100%;
+    z-index: 10;
+}
+
+.info-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.info-menu-btn {
+    font-size: 24px;
+    font-family: 'Pokemon-Hollow';
+    color: black;
+    font-weight: bold;
+    width: 20%;
+    border: none;
+    border-right: solid;
+    padding: 6px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.info-menu-btn:hover {
+    background-color: rgb(45, 221, 251);
+}
+
+.colorTurquoise {
+    background-color: rgb(45, 221, 251);
+}
+
+.content-box {
+    background: rgb(34, 116, 195);
+    background: -moz-linear-gradient(0deg, rgba(34, 116, 195, 1) 0%, rgba(45, 224, 253, 1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(34, 116, 195, 1) 0%, rgba(45, 224, 253, 1) 100%);
+    background: linear-gradient(0deg, rgba(34, 116, 195, 1) 0%, rgba(45, 224, 253, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2274c3", endColorstr="#2de0fd", GradientType=1);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    margin-bottom: 4.6%;
+    z-index: 10;
+}
+
+@media (max-width:768px) {
+    .info-menu-div {
+        display: none;
+    }
+
+    .content-box {
+        margin-bottom: 30px;
+    }
+}

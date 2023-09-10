@@ -1,0 +1,14 @@
+.pokemon-abilities-types-div {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokemon-types-info {
+    width: 50%;
+    text-align: center;
+    background-color: #ffe800db;
+    border-radius: 10px;
+    margin-bottom: 22px;
+}

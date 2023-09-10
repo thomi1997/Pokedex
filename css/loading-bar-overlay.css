@@ -1,0 +1,53 @@
+/* Füge hier dein CSS für das Overlay und den Ladebalken hinzu */
+/* Zentriere das Overlay und setze es auf 100% Höhe und Breite */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background: rgb(63, 94, 251);
+    background: -moz-radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(70, 236, 252, 1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(70, 236, 252, 1) 100%);
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(70, 236, 252, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3f5efb", endColorstr="#46ecfc", GradientType=1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    /* Ausblenden des Overlays zu Beginn */
+}
+
+/* Setze den Ladebalken-Stil hier */
+#loading-bar-container {
+    width: 400px;
+    height: 40px;
+    background-color: #ccc;
+    font-size: 34px;
+    position: relative;
+    border: 6px solid;
+    border-radius: 10px;
+    border-color: rgb(255, 255, 255);
+}
+
+#loading-bar {
+    height: 100%;
+    background: rgb(255, 236, 4);
+    background: -moz-linear-gradient(17deg, rgba(255, 236, 4, 1) 13%, rgba(217, 236, 230, 1) 51%, rgba(77, 212, 237, 1) 71%);
+    background: -webkit-linear-gradient(17deg, rgba(255, 236, 4, 1) 13%, rgba(217, 236, 230, 1) 51%, rgba(77, 212, 237, 1) 71%);
+    background: linear-gradient(17deg, rgba(255, 236, 4, 1) 13%, rgba(217, 236, 230, 1) 51%, rgba(77, 212, 237, 1) 71%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffec04", endColorstr="#4dd4ed", GradientType=1);
+}
+
+/* Stil für die Prozentzahl innerhalb des Ladebalkens */
+#loading-percentage {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(34, 87, 133);
+    font-weight: bold;
+    padding: 2px 5px;
+}

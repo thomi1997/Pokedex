@@ -1,0 +1,111 @@
+.change-number-div {
+    width: 22.5%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.number-control {
+    width: 40%;
+    display: flex;
+}
+
+#current-number {
+    max-width: 50%;
+    border: none;
+    text-align: center;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    font-size: 18px;
+}
+
+#current-number::-webkit-inner-spin-button,
+#current-number::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.change-number-pokemon-btn {
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #c30000;
+    color: white;
+    border: none;
+    font-size: 18px;
+    margin-left: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.download-svg {
+    height: 20px;
+    width: 100%;
+    fill: black;
+}
+
+.download-svg:hover {
+    fill: white;
+}
+
+.button-up {
+    border: none;
+    border-radius: 45%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: #c30000;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.button-down {
+    border: none;
+    border-radius: 45%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: #c30000;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.plus-minus-svg {
+    height: 20px;
+    width: 100%;
+}
+
+.click-up-down-button {
+    filter: brightness(2);
+}
+
+.change-number-alert {
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    background-color: #c30000;
+    font-family: 'Pokemon-Hollow';
+    font-weight: bold;
+    font-size: 28px;
+    border-radius: 12px;
+    padding: 16px;
+    animation: changeNumberAlertOpen 1s forwards ease-in-out;
+}
+
+@keyframes changeNumberAlertOpen {
+    0% {
+        left: -50%;
+    }
+
+    50% {
+        left: 2%;
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+@media (max-width:1024px) {
+    .change-number-div {
+        display: none;
+    }
+}
