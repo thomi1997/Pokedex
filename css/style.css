@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+}
+
+@font-face {
+    font-family: "Baloo";
+    src: url("/fonts/Baloo/Baloo-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Pokemon-Hollow";
+    src: url("/fonts/pokemon-font/Pokemon Hollow.ttf");
+}
+
+h1 {
+    font-family: 'Pokemon-Hollow';
+    font-size: 2rem;
+    color: rgb(103, 100, 100);
+}
+
+h2 {
+    font-family: 'Baloo';
+    font-size: 1.6rem;
+    color: rgb(255, 255, 255);
+}
+
+h3 {
+    font-family: 'Baloo';
+    font-size: 1.4rem;
+    color: rgb(28, 28, 28);
+}
+
+p {
+    font-size: 1.2rem;
+    font-family: 'Baloo';
+    color: rgb(255, 255, 255);
+}
+
+.background {
+    height: 100vh;
+    width: 100%;
+}
+
+input:focus-visible {
+    outline: none;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.d-none {
+    display: none;
+}
+
+.border-right-none {
+    border-right: none;
+}
+
+@media (max-width:320px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+}

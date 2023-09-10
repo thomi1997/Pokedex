@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="css/pokedex-cards.css">
+    <link rel="stylesheet" href="css/search-input.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/menu-mobile.css">
+    <link rel="stylesheet" href="css/change-number.css">
+    <link rel="stylesheet" href="css/pokedex-info-overlay.css">
+
+    <!-- Capabilities & Menu-info -->
+    <link rel="stylesheet" href="css/complete-menu-pokemon-info/pokedex-info-overlay-menu.css">
+    <link rel="stylesheet" href="css/complete-menu-pokemon-info/pokedex-info-overlay-menu-mobile.css">
+    <link rel="stylesheet" href="css/complete-menu-pokemon-info/pokedex-info-base-stats.css"> 
+    <link rel="stylesheet" href="css/complete-menu-pokemon-info/pokedex-info-capabilities.css">
+    <link rel="stylesheet" href="css/complete-menu-pokemon-info/pokedex-info-moves.css"> 
+    <link rel="stylesheet" href="css/complete-menu-pokemon-info/pokedex-info-evolution.css">
+    <link rel="stylesheet" href="css/complete-menu-pokemon-info/pokedex-info-about.css">
+
+    <link rel="stylesheet" href="css/loading-bar-overlay.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/impressum.css">
+
+    <!-- Functions -->
+    <script src="js/script.js"></script>
+    <script src="js/load-pokemon.js"></script>
+    <script src="js/render-profile.js"></script>
+    <script src="js/render-profile-info.js"></script>
+    <script src="js/colors.js"></script>
+    <script src="js/change-number.js"></script>
+    <script src="js/search-profile.js"></script>
+
+    <!-- Templates -->
+    <script src="js/templates/render-pokemon-profil.js"></script>
+    <script src="js/templates/render-menu.js"></script>
+    <script src="js/templates/render-refresh-search-profil.js"></script>
+
+    <!-- Complete Menu -->
+    <script src="js/templates/complete-menu-pokemon-info/render-pokemon-info-overlay-profile.js"></script>
+    <script src="js/templates/complete-menu-pokemon-info/render-pokemon-info-menu.js"></script>
+    <script src="js/templates/complete-menu-pokemon-info/render-pokemon-info-base-stats.js"></script>
+    <script src="js/templates/complete-menu-pokemon-info/render-pokemon-info-capabilities.js"></script>
+    <script src="js/templates/complete-menu-pokemon-info/render-pokemon-info-evolution.js"></script>
+    <script src="js/templates/complete-menu-pokemon-info/render-pokemon-info-about.js"></script>
+
+    <script src="js/templates/render-change-number-control.js"></script>
+    <script src="js/templates/render-impressum.js"></script>
+    <title>Pokedex</title>
+</head>
+
+<body onload="loadPokemon()">
+    <div id="overlay">
+        <div id="loading-bar-container">
+            <div id="loading-bar"></div>
+            <div id="loading-percentage">0%</div>
+        </div>
+        <p>Loading...</p>
+        <p>Please wait a moment !</p>
+    </div>
+    <div id="impressum-overlay">
+    </div>
+    <div id="create-menu" class="menu-div">
+    </div>
+    <div id="create-menu-mobile">
+    </div>
+    <div class="not-found" id="pokedex-not-found">
+    </div>
+    <div class="pokedex" id="pokedex">
+    </div>
+    <div class="pokedex-search" id="pokedex-search">
+    </div>
+    <div class="info-container" id="pokemon-stats">
+    </div>
+</body>
+
+</html>

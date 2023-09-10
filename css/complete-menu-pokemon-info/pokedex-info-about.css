@@ -1,0 +1,21 @@
+.content-div {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.about-box {
+    width: 48.7%;
+    font-size: 22px;
+    font-family: 'Baloo';
+    background-color: #9fdeebd1;
+    border-radius: 10px;
+    text-align: center;
+}
+
+@media (max-width:720px) {
+    .content-div {
+        width: 95%;
+    }
+}

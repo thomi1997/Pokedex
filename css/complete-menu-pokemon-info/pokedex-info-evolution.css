@@ -1,0 +1,45 @@
+.content-box-evolution {
+    background: rgb(34, 116, 195);
+    background: -moz-linear-gradient(0deg, rgba(34, 116, 195, 1) 0%, rgba(45, 224, 253, 1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(34, 116, 195, 1) 0%, rgba(45, 224, 253, 1) 100%);
+    background: linear-gradient(0deg, rgba(34, 116, 195, 1) 0%, rgba(45, 224, 253, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2274c3", endColorstr="#2de0fd", GradientType=1);
+    height: -webkit-fill-available;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    overflow-y: auto;
+    z-index: 10;
+    margin-bottom: 4.6%;
+}
+
+.pokemon-img-info-evolution {
+    width: 50%;
+    object-fit: contain;
+}
+
+.min-level-div {
+    background-color: #ffe800db;
+    width: 14%;
+    border-radius: 4px;
+    padding: 6px;
+}
+
+.arrow-right-svg {
+    height: auto;
+    width: 28px;
+    fill: rgb(255, 166, 0);
+    /*rotate: 90deg;*/
+}
+
+@media (max-width:720px) {
+    .content-box-evolution {
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .min-level-div {
+        width: 28%;
+    }
+}

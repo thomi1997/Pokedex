@@ -1,0 +1,40 @@
+.info-menu-div-mobile {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(45, 221, 251);
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+    margin-top: -40px;
+}
+
+.caret-down-svg {
+    height: 56px;
+    width: auto;
+    fill: #ffe800db;
+    cursor: pointer;
+    rotate: 180deg;
+}
+
+.info-menu-mobile {
+    position: absolute;
+    top: 62%;
+    z-index: 999;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.info-menu-btn-mobile {
+    font-size: 1.6rem;
+    font-family: 'baloo';
+    color: black;
+    cursor: pointer;
+}
+
+@media (min-width:768px) {
+    .info-menu-div-mobile {
+        display: none;
+    }
+}
+

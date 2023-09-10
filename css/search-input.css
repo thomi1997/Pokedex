@@ -1,0 +1,44 @@
+.search-pokemon-input {
+    width: 22.5%;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.not-found {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top: 13.8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.alert-not-found {
+    background-color: red;
+    padding: 20px 40px 20px 40px;
+    color: black;
+    font-weight: 800;
+    font-size: 32px;
+    font-family: 'Pokemon-Hollow';
+}
+
+@media (max-width:1024px) {
+    .search-pokemon-input {
+        width: 50%;
+    }
+}
+
+@media (max-width:400px) {
+    .search-pokemon-input {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .not-found {
+        top: 20%;
+    }
+}
