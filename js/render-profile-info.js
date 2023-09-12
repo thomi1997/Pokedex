@@ -214,6 +214,7 @@ function showStat() {
     document.getElementById('height-weight').classList.add('d-none');
     document.getElementById('moves-none').classList.add('d-none');
     document.getElementById('evolution').classList.add('d-none');
+    showInfoMenuMobile();
 }
 
 
@@ -229,6 +230,7 @@ function showCapabilities() {
     document.getElementById('height-weight').classList.add('d-none');
     document.getElementById('moves-none').classList.add('d-none');
     document.getElementById('evolution').classList.add('d-none');
+    showInfoMenuMobile();
 }
 
 
@@ -244,6 +246,7 @@ function showMoves() {
     document.getElementById('stat').classList.add('d-none');
     document.getElementById('types-info').classList.add('d-none');
     document.getElementById('evolution').classList.add('d-none');
+    showInfoMenuMobile();
 }
 
 
@@ -259,6 +262,7 @@ function showEvolution() {
     document.getElementById('stat').classList.add('d-none');
     document.getElementById('types-info').classList.add('d-none');
     document.getElementById('moves-none').classList.add('d-none');
+    showInfoMenuMobile();
 }
 
 
@@ -274,4 +278,5 @@ function showAbout() {
     document.getElementById('types-info').classList.add('d-none');
     document.getElementById('moves-none').classList.add('d-none');
     document.getElementById('evolution').classList.add('d-none');
+    showInfoMenuMobile();
 }

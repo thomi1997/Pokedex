@@ -17,9 +17,9 @@
     <!-- Capabilities & Menu-info -->
     <link rel="stylesheet" href="css/complete-menu-pokemon-info/pokedex-info-overlay-menu.css">
     <link rel="stylesheet" href="css/complete-menu-pokemon-info/pokedex-info-overlay-menu-mobile.css">
-    <link rel="stylesheet" href="css/complete-menu-pokemon-info/pokedex-info-base-stats.css"> 
+    <link rel="stylesheet" href="css/complete-menu-pokemon-info/pokedex-info-base-stats.css">
     <link rel="stylesheet" href="css/complete-menu-pokemon-info/pokedex-info-capabilities.css">
-    <link rel="stylesheet" href="css/complete-menu-pokemon-info/pokedex-info-moves.css"> 
+    <link rel="stylesheet" href="css/complete-menu-pokemon-info/pokedex-info-moves.css">
     <link rel="stylesheet" href="css/complete-menu-pokemon-info/pokedex-info-evolution.css">
     <link rel="stylesheet" href="css/complete-menu-pokemon-info/pokedex-info-about.css">
 
@@ -56,11 +56,17 @@
 
 <body onload="loadPokemon()">
     <div id="overlay">
+        <img class="pikachu-img-overlay-loading" src="img/pikachu.svg" alt="pikachu">
         <div id="loading-bar-container">
             <div id="loading-bar"></div>
             <div id="loading-percentage">0%</div>
         </div>
-        <p>Loading...</p>
+        <p>Loading . . .</p>
+        <p>Please wait a moment !</p>
+    </div>
+    <div class="loader-container d-none" id="loader">
+        <div class="loader"></div>
+        <p>Loading . . .</p>
         <p>Please wait a moment !</p>
     </div>
     <div id="impressum-overlay">

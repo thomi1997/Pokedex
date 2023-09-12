@@ -17,6 +17,16 @@ function hideOverlay() {
 }
 
 
+function showOverlayPokemonInfo() {
+    document.getElementById("loader").classList.remove('d-none');
+}
+
+
+function hideOverlayPokemonInfo() {
+    document.getElementById("loader").classList.add('d-none');
+}
+
+
 async function loadPokemon() {
     showOverlay();
     for (let i = 1; i < numberPokemons; i++) {
@@ -48,6 +58,7 @@ async function loadPokemonTypeNumber() {
 
 
 async function loadPokemonAbilities(abilities) {
+    showOverlayPokemonInfo();
     for (let i = 0; i < abilities.length; i++) {
         let ability = abilities[i]['ability'];
         let abilityUrl = ability['url'];
@@ -64,6 +75,7 @@ async function loadEvolutionChain(evolutionChain) {
     let response = await fetch(url);
     let pokedexEvolutionChain = await response.json();
     pokedexEvolutionChains.push(pokedexEvolutionChain);
+    hideOverlayPokemonInfo();
 }
 
 
