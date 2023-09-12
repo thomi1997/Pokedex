@@ -1,5 +1,3 @@
-/* Füge hier dein CSS für das Overlay und den Ladebalken hinzu */
-/* Zentriere das Overlay und setze es auf 100% Höhe und Breite */
 #overlay {
     position: fixed;
     top: 0;
@@ -17,7 +15,6 @@
     align-items: center;
     flex-direction: column;
     display: none;
-    /* Ausblenden des Overlays zu Beginn */
 }
 
 .pikachu-img-overlay-loading {
@@ -26,7 +23,6 @@
     filter: invert(1);
 }
 
-/* Setze den Ladebalken-Stil hier */
 #loading-bar-container {
     width: 400px;
     height: 40px;
@@ -47,7 +43,6 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffec04", endColorstr="#4dd4ed", GradientType=1);
 }
 
-/* Stil für die Prozentzahl innerhalb des Ladebalkens */
 #loading-percentage {
     position: absolute;
     top: 0;
